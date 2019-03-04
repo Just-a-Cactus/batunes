@@ -1,0 +1,88 @@
+.ba-header {
+	background: #333 url(../img/psp-hero-itunes.image.large_2x.jpg) 50%;
+	background-size: cover;
+	color: #fff;
+	padding: 40px 20px 60px;
+
+	img {
+		max-width: 150px;
+	}
+}
+
+.ba-search-form {
+	display: flex;
+	max-width: 500px;
+	margin: 40px auto;
+
+	.input-field {
+		margin-bottom: 0;
+		flex-grow: 1;
+		margin-right: 15px;
+	}
+}
+
+.ba-tunes-list {
+	margin-top: 30px;
+}
+
+.ba-tune-card {
+
+	.icon-pause {
+		display: none;
+	}
+
+	.pulse {
+		.icon-pause {
+			display: block;
+		}
+
+		.icon-play {
+			display: none;
+		}
+	}
+
+	.card-image {
+		.card-title {
+			margin: 0;
+			width: 100%;
+			background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0))
+		}
+
+		button {
+			i {
+				pointer-events: none;
+			}
+		}
+	}
+
+	.card-content {
+		.card-title {
+			margin-top: 0;
+		}
+
+		.badge {
+			display: inline-flex;
+			align-items: center;
+
+			i {
+				margin-right: 5px;
+			}
+		}
+	}
+}
+
+.page-footer {
+	padding-top: 0;
+}
+
+.ba-tunes-list-wrap {
+	position: relative;
+	min-height: 100px;
+
+	.preloader-wrapper {
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		margin-left: -30px;
+	}
+}

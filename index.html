@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>iTunes API Search</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png" />
+
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header class="ba-header center-align">
+		<img src="./favicon.png" alt="iTunes Search">
+		<h1>iTunes Search</h1>
+		<p>Your music, movies, and TV shows take center stage.</p>
+	</header>
+
+	<main>
+		<div class="container">
+			<form action="#" method="POST" class="card-panel ba-search-form">
+				<div class="input-field">
+					<input value='Apocalyptica' required id="search-query" type="text" class="validate">
+					<label for="search-query">Enter artist name</label>
+				</div>
+				<button type="submit" class="btn-floating btn-large waves-effect waves-light indigo">
+					<i class="material-icons">search</i>
+				</button>
+			</form>
+			<div class="divider"></div>
+
+
+
+
+			<div class="ba-tunes-list-wrap">
+				<div class="preloader-wrapper big">
+					<div class="spinner-layer spinner-blue-only">
+						<div class="circle-clipper left">
+							<div class="circle"></div>
+						</div>
+						<div class="gap-patch">
+							<div class="circle"></div>
+						</div>
+						<div class="circle-clipper right">
+							<div class="circle"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row ba-tunes-list">
+					<script type="text/template" id="tune-tmpl">
+						<div class="col s12 m6 l4">
+						<div class="card hoverable ba-tune-card">
+							<div class="card-image">
+								<img src="{{artworkUrl100}}" alt="collectionName">
+								<h3 class="card-title">{{artistName}}</h3>
+								<button data-id="audio-{{trackId}}" data-action="play" class="btn-floating btn-large halfway-fab waves-effect waves-light indigo">
+									<i class="material-icons icon-play">play_arrow</i>
+									<i class="material-icons icon-pause">pause</i>
+								</button>
+								<audio loop id="audio-{{trackId}}" src="{{previewUrl}}"></audio>
+							</div>
+							<div class="card-content">
+								<h4 class="card-title">{{trackName}}</h4>
+								<p>Album - {{collectionName}}
+									<span class="new badge" data-badge-caption="{{duration}}">
+										<i class="material-icons tiny">access_time</i>
+									</span>
+								</p>
+								<p class="grey-text text-lighten-1">Genre - {{primaryGenreName}}</p>
+							</div>
+							<!-- card-content -->
+							<div class="card-action">
+								<a href="{{collectionViewUrl}}" target="blank">
+									<i class="material-icons tiny">shopping_cart</i>Buy collection - ${{collectionPrice}}</a>
+							</div>
+							<!-- card-action -->
+						</div>
+						<!-- .card -->
+					</div>
+					<!-- /.col s4 -->
+				</script>
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
+	</main>
+
+	<footer class="page-footer pink">
+		<div class="footer-copyright">
+			<div class="container">
+				© 2018 Copyright Text
+				<a class="grey-text text-lighten-4 right" href="#!">created by crazy Beetroots \m/</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>
