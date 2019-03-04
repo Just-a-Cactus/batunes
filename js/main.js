@@ -19,7 +19,7 @@
 		loader.classList.add('active');
 
 		query = form['search-query'].value;
-		url = `http://itunes.apple.com/search?term=${query}&limit=12`;
+		url = `https://itunes.apple.com/search?term=${query}&limit=12`;
 
 		xhr.open('GET', url);
 		xhr.send();
